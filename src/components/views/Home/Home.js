@@ -14,7 +14,7 @@ class Home extends React.Component {
   onSubmit(event) {
     event.preventDefault();
     const {searchText} = this.state;
-    const url = `http://www.omdbapi.com/?apikey=157f34ed&t=${searchText}`;
+    const url = `https://www.omdbapi.com/?apikey=157f34ed&t=${searchText}`;
     fetch(url)
       .then(response => response.json())
       .then(responseJson => this.setState({movie: responseJson}));
