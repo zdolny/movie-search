@@ -1,23 +1,14 @@
 import React from 'react';
+import Home from './components/views/Home/Home';
+import {BrowserRouter, Route} from 'react-router-dom';
+import MainLayout from './components/layout/MainLayout/MainLayout';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <BrowserRouter>
+    <MainLayout>
+      <Route exact path='/' component={Home} />
+    </MainLayout>
+  </BrowserRouter>
+);
 
 export default App;
